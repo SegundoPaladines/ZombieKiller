@@ -23,7 +23,7 @@ Autor: Segundo Santander Paladines Ortiz
 
 ---
 
-## Creditos de los sonidos: 
+# Creditos de los sonidos: 
 
--<a href="http://www.sonidosmp3gratis.com/">http://www.sonidosmp3gratis.com/</a> <br>
--<a href="https://pixabay.com/">https://pixabay.com/</a>
+- <a href="http://www.sonidosmp3gratis.com/">http://www.sonidosmp3gratis.com/</a> <br>
+- <a href="https://pixabay.com/">https://pixabay.com/</a>
