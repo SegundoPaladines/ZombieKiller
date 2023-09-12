@@ -14,10 +14,9 @@ Autor: Segundo Santander Paladines Ortiz
 
 ### Notas:
 
-1. **Recomendación de dificultad:** Se recomienda jugar en **Fácil**, ya que las otras dificultades pueden resultar muy desafiantes, e incluso en algunas, prácticamente imposibles de superar.
+1. **Recomendación de dificultad:** Se recomienda jugar en **Fácil**, ya que aún falta ajustar las otras dificultades y puede resultar imposible dar pelea.
 
-2. **Créditos de las imágenes:** Para las imágenes de fondo y las figuras utilizadas en el juego, se han empleado recursos encontrados en internet. Los créditos y derechos de autor corresponden a sus respectivos creadores. Se agradece a la comunidad por compartir estas imágenes.
-
+2. **Créditos de las imágenes:** Para las imágenes de fondo y las figuras utilizadas en el juego, se utilizaron recursos encontrados en internet, creditos de las imagenes a quien corresponda.
 ---
 
 ¡Diviértete jugando! 🎮
