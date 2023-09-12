@@ -1,7 +1,6 @@
 ## Instrucciones del juego:
 
 Autor: Segundo Santander Paladines Ortiz
-© 2023
 
 ![Licencia CC](https://img.shields.io/badge/Licencia-CC%202023-green)
 
