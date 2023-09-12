@@ -10,6 +10,15 @@ class Juego:
         self.shooter = shooter
         self.estado = True
 
+        self.juego_sound = pygame.mixer.Sound("sound/juego.mp3")
+        self.zombie_sound = pygame.mixer.Sound("sound/zombie.mp3")
+        self.disparo_sound = pygame.mixer.Sound("sound/disparo.mp3")
+        self.recarga_sound = pygame.mixer.Sound("sound/recarga.mp3")
+
+        self.zombie_sound_timer = time.time()
+
+        self.principal_sound_timer = time.time()
+
         #Tamaño de la ventana
         self.SCREEN_WIDTH = 1200
         self.SCREEN_HEIGHT = 600
@@ -86,6 +95,7 @@ class Juego:
                 nueva_bala = Bala(self.shooter.x+25, self.shooter.y+20, self.miraX, self.miraY, velocidad=100)
                 self.balas.append(nueva_bala)
                 self.shooter.disparar()
+                self.disparo_sound.play()
                 self.actualizar_info(ventana)
                 self.tiempo_disparo = 0
 
@@ -101,6 +111,7 @@ class Juego:
             if tiempo_transcurrido >= self.recarga_duracion:
                 self.recarga_tiempo = 0
                 self.shooter.recargar()
+                self.recarga_sound.play()
                 self.actualizar_info(ventana)
             else:
                 self.mostrar_recargando(ventana)
@@ -203,8 +214,20 @@ class Juego:
         else:
             return True
 
+    def repetirSonidos(self):
+        if (time.time() - self.zombie_sound_timer) >= 20:
+            self.zombie_sound.play()
+            self.zombie_sound_timer = time.time()
+        
+        if (time.time() - self.principal_sound_timer) >= 121:
+            self.juego_sound.play()
+            self.principal_sound_timer = time.time()
+
     def iniciar(self):
         pygame.init()
+        pygame.mixer.init()
+
+        self.juego_sound.play()
 
         # Instancia de la ventana
         ventana = pygame.display.set_mode((self.SCREEN_WIDTH, self.SCREEN_HEIGHT))
@@ -220,6 +243,8 @@ class Juego:
             # Llama a la función para mostrar la información
 
             self.estado = self.verificarEstado()
+
+            self.repetirSonidos()
 
             self.generarZombie(ventana)
 
@@ -245,7 +270,8 @@ class Juego:
 
             # Actualiza la ventana para mostrar los cambios
             pygame.display.flip()
-
+        
+        self.juego_sound.stop()
+        
         pygame.quit()
-
         return self.shooter.score

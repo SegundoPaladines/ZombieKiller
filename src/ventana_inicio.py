@@ -1,12 +1,18 @@
 import pygame
+import time
 
 class VentanaInicio:
     def __init__(self):
         pygame.init()
+        pygame.mixer.init()
 
         # Constantes
         SCREEN_WIDTH = 1200
         SCREEN_HEIGHT = 600
+
+        self.inicio_sound = pygame.mixer.Sound("sound/inicio.mp3")
+        self.sound_timer = time.time()
+
         self.WHITE = (255, 255, 255)
         self.BLACK = (0, 0, 0)
         self.FONT = pygame.font.Font(None, 36)
@@ -88,10 +94,17 @@ class VentanaInicio:
             text_rect = text.get_rect(center=button.center)
             self.screen.blit(text, text_rect)
 
+    def repetirSonido(self):
+        if (time.time() - self.sound_timer) >= 86:
+            self.inicio_sound.play()
+            self.sound_timer = time.time()
+
     # Función para mostrar la pantalla de inicio
     def mostrar_pantalla_inicio(self):
         self.create_difficulty_buttons()
 
+        self.inicio_sound.play()
+        
         while not self.cerrar_ventana:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -110,6 +123,8 @@ class VentanaInicio:
 
             self.draw_difficulty_buttons()
 
+            self.repetirSonido()
+
             if self.selected_difficulty:
                 self.mostrar_mensaje(f"Dificultad seleccionada: {self.selected_difficulty}", 450, 400)
             
@@ -126,6 +141,7 @@ class VentanaInicio:
 
             # Verificar si el usuario presionó Enter y devolver los datos
             if self.entrada:
+                self.inicio_sound.stop()
                 return self.entrada
 
     # Función para mostrar un mensaje en pantalla

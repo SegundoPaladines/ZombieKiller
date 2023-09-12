@@ -16,7 +16,14 @@ Autor: Segundo Santander Paladines Ortiz
 
 1. **Recomendación de dificultad:** Se recomienda jugar en **Fácil**, ya que aún falta ajustar las otras dificultades y puede resultar imposible dar pelea.
 
-2. **Créditos de las imágenes:** Para las imágenes de fondo y las figuras utilizadas en el juego, se utilizaron recursos encontrados en internet, creditos de las imagenes a quien corresponda.
+2. **Créditos de las imágenes:** Para las imágenes de fondo, sonidos y las figuras utilizadas en el juego, se utilizaron recursos encontrados en internet, creditos de las imagenes a quien corresponda.
 ---
 
 ¡Diviértete jugando! 🎮
+
+---
+
+## Creditos de los sonidos: 
+
+-<a href="http://www.sonidosmp3gratis.com/">http://www.sonidosmp3gratis.com/</a>
+-<a href="https://pixabay.com/">https://pixabay.com/</a>
